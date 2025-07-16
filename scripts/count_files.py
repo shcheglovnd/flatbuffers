@@ -14,6 +14,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""
+File counting utility for the FlatBuffers repository.
+
+This script counts the number of files in the repository with various filtering options.
+By default, it excludes common build and cache directories.
+
+Examples:
+    python3 scripts/count_files.py                    # Default behavior
+    python3 scripts/count_files.py --include-hidden   # Include hidden files
+    python3 scripts/count_files.py --no-exclude       # Count all files
+    python3 scripts/count_files.py --exclude .git     # Custom exclusions
+    python3 scripts/count_files.py --verbose          # Detailed output
+"""
+
 import argparse
 import os
 from pathlib import Path
